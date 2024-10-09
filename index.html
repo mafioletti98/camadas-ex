@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Visualização de Camadas</title>
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div class="container-fluid h-100">
+
+            <header
+                class="bg-dark text-white d-flex justify-content-between align-items-center p-3">
+                <div>
+                    <h1 class="titulo-header">ESTEIO</h1>
+                    <h2 class="subtitulo-header">Visualização de Camadas</h2>                    
+                </div>
+                <button id="botao-camadas" class="btn btn-success"
+                    onclick="alternarPainelCamadas(event)">
+                    <i class="fas fa-layer-group"></i> Camadas
+                </button>
+            </header>
+
+            <div id="painel-camadas" class="painel-camadas card shadow">
+                <div class="card-body">
+                    <h3 class="card-title">Camadas</h3>
+                    <div class="form-check">
+                        <input type="checkbox" name="camada" id="saneamento"
+                            class="form-check-input"
+                            onclick="mudarCamada('saneamento')">
+                        <label class="form-check-label" for="saneamento"><i
+                                class="fas fa-water"></i> Saneamento</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="camada" id="seguranca"
+                            class="form-check-input"
+                            onclick="mudarCamada('seguranca')">
+                        <label class="form-check-label" for="seguranca"><i
+                                class="fas fa-shield-alt"></i> Segurança e
+                            Fiscalização</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="camada" id="transporte"
+                            class="form-check-input"
+                            onclick="mudarCamada('transporte')">
+                        <label class="form-check-label" for="transporte"><i
+                                class="fas fa-bus"></i> Transporte e
+                            Mobilidade</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="camada" id="vegetacao"
+                            class="form-check-input"
+                            onclick="mudarCamada('vegetacao')">
+                        <label class="form-check-label" for="vegetacao"><i
+                                class="fas fa-tree"></i> Vegetação</label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mapa" class="flex-fill"></div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="js/script.js"></script> 
+
+    </body>
+</html>

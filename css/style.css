@@ -1,0 +1,107 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#mapa {
+    height: 100%;
+    width: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 0; 
+}
+
+.container-fluid {
+    height: 100%;
+    padding: 0;
+}
+
+header {
+    z-index: 1000; 
+    position: relative;
+    background-color: #034383;
+    padding: 10px 20px;
+}
+
+.titulo-header {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.subtitulo-header {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    margin: 0;
+}
+
+#botao-camadas {
+    background-color: #0dff00;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    transition: background-color 0.3s ease;
+    z-index: 1001; 
+}
+
+#botao-camadas:hover {
+    background-color: rgb(0, 255, 98);    
+}
+
+.painel-camadas {
+    position: absolute;
+    display: none; 
+    z-index: 1001;
+    background-color: #0156ac;
+    border: 1px solid #2581dd; 
+    border-radius: 10px;
+    width: 250px;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease, left 0.3s ease, top 0.3s ease; 
+    color: #fff;
+}
+
+.painel-camadas h3 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.painel-camadas .form-check-label {
+    color: #f8f9fa; 
+
+.form-check {
+    margin: 5px 0;
+}
+
+.painel-camadas .form-check-label i {
+    color: #28a745; 
+    margin-right: 10px;
+}
+
+.painel-camadas .form-check-label:hover i {
+    color: #ffc107; 
+}
+
+#botao-camadas {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#botao-camadas:hover {
+    background-color: #218838;
+}}
