@@ -1,3 +1,10 @@
+/* Reset global de margens e padding para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -6,25 +13,36 @@ html, body {
     overflow: hidden;
 }
 
-#mapa {
-    height: 100%;
-    width: 100%;
-    position: absolute; 
-    top: 0;
-    left: 0;
-    z-index: 0; 
-}
-
 .container-fluid {
     height: 100%;
+    display: flex;
+    flex-direction: column;
     padding: 0;
 }
 
 header {
     z-index: 1000; 
-    position: relative;
-    background-color: #034383;
+    background-color: #034383;    
     padding: 10px 20px;
+}
+
+.row {
+    flex: 1; 
+    margin: 0; 
+    padding: 0; 
+}
+
+#mapa {
+    height: 100%;
+    width: 100%;
+}
+
+.visualizacao-imagens, .outra-div {
+    flex: 1; 
+    border: 1px solid #ccc;
+    overflow: hidden; 
+    margin: 0; 
+    padding: 0; 
 }
 
 .titulo-header {
@@ -42,7 +60,7 @@ header {
 }
 
 #botao-camadas {
-    background-color: #0dff00;
+    background-color: #0f9108;
     border: none;
     font-size: 1.2rem;
     font-weight: bold;
@@ -79,6 +97,7 @@ header {
 
 .painel-camadas .form-check-label {
     color: #f8f9fa; 
+}
 
 .form-check {
     margin: 5px 0;
@@ -92,16 +111,3 @@ header {
 .painel-camadas .form-check-label:hover i {
     color: #ffc107; 
 }
-
-#botao-camadas {
-    background-color: #28a745;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#botao-camadas:hover {
-    background-color: #218838;
-}}

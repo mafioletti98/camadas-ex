@@ -1,4 +1,4 @@
-var mapa = L.map('mapa').setView([-3.71722, -38.54337], 12); 
+var mapa = L.map('mapa').setView([-5.095625370566354, -42.80261634613696], 12); // TERESINA
 
 var camadas = {
     saneamento: L.layerGroup().addTo(mapa), 
@@ -17,21 +17,21 @@ function criarPoligono(camada) {
     
     switch (camada) {
         case 'saneamento':
-            coordenadas = [[-3.71722, -38.54337], [-3.71222, -38.54037], [-3.71522, -38.55037]];
+            coordenadas = [[-5.065634573530536, -42.79341495810306], [-5.0814959572553695, -42.76940684657558], [-5.065366130722947, -42.752022896705185]];
             break;
         case 'seguranca':
-            coordenadas = [[-3.72522, -38.54337], [-3.72522, -38.55037], [-3.72022, -38.54837]];
+            coordenadas = [[-5.073138098550511, -42.807134739598446], [-5.069200898573242, -42.808480939452906], [-5.086048017997727, -42.81779659343033]];
             break;
         case 'transporte':
-            coordenadas = [[-3.73022, -38.55337], [-3.73322, -38.55037], [-3.73122, -38.54537]];
+            coordenadas = [[-5.091779237537374, -42.79643516926362], [-5.095316511659258, -42.814191658441224], [-5.109958974522348, -42.79833470078417]];
             break;
         case 'vegetacao':
-            coordenadas = [[-3.72022, -38.54037], [-3.72222, -38.54337], [-3.71822, -38.54537]];
+            coordenadas = [[-5.110908129980748, -42.75416612340153], [-5.089323521748492, -42.735829628332766], [-5.101894865353572, -42.75964325829221]];
             break;
     }
 
     const poligono = L.polygon(coordenadas, {
-        color: camada === 'saneamento' ? 'blue' : camada === 'seguranca' ? 'red' : camada === 'transporte' ? 'green' : 'yellow',
+        color: camada === 'saneamento' ? 'blue' : camada === 'seguranca' ? 'red' : camada === 'transporte' ? 'brown' : 'green',
         fillOpacity: 0.5
     }).bindPopup(`Polígono de ${camada.charAt(0).toUpperCase() + camada.slice(1)}`);
 

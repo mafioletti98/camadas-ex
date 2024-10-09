@@ -17,18 +17,30 @@
     <body>
 
         <div class="container-fluid h-100">
-
             <header
                 class="bg-dark text-white d-flex justify-content-between align-items-center p-3">
                 <div>
                     <h1 class="titulo-header">ESTEIO</h1>
-                    <h2 class="subtitulo-header">Visualização de Camadas</h2>                    
+                    <h2 class="subtitulo-header"><strong>Visualização de Imagens Inclinadas</strong></h2>
                 </div>
                 <button id="botao-camadas" class="btn btn-success"
                     onclick="alternarPainelCamadas(event)">
                     <i class="fas fa-layer-group"></i> Camadas
                 </button>
             </header>
+
+            <div class="row flex-grow-1">
+                <div class="col-12 col-md-6 d-flex flex-column">
+                    <div class="visualizacao-imagens">
+                        <h5>Tela 1</h5>
+                    </div>
+                    <div class="outra-div">
+                        <h5>Tela 2</h5>
+                    </div>
+                </div>
+
+                <div id="mapa" class="col-12 col-md-6"></div>
+            </div>
 
             <div id="painel-camadas" class="painel-camadas card shadow">
                 <div class="card-body">
@@ -65,9 +77,6 @@
                     </div>
                 </div>
             </div>
-
-            <div id="mapa" class="flex-fill"></div>
-
         </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -76,7 +85,7 @@
         <script
             src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script src="js/script.js"></script> 
+        <script src="js/script.js"></script>
 
     </body>
 </html>
