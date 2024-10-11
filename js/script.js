@@ -2,7 +2,7 @@ var mapa = L.map("mapa").setView([-5.095625370566354, -42.80261634613696], 11); 
 
 var estiloArticulacaoFolha = {
   color: "#000080",
-  weight: 5,
+  weight: 1,
   fillColor: "transparent",
   // "opacity": 0.65
 };
@@ -12,7 +12,7 @@ var articulacaoFolhas = L.geoJSON([articulacao], {
 }).addTo(mapa);
 
 var estiloPonto = {
-  radius: 8,
+  radius: 3,
   fillColor: "#ff7800",
   color: "#000",
   weight: 1,
